@@ -1,0 +1,17 @@
+body {
+    padding: 11px;
+}
+
+button {
+    width: 120px;
+    height: 30px;
+}
+
+.userName {
+    color: darkcyan;
+}
+
+.twtTime {
+    font-style: italic;
+    color: darkgoldenrod;
+}
