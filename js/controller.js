@@ -1,12 +1,16 @@
 var controllers = angular.module('myApp.controllers', []);
 
-
-
-controllers.controller('welcomeController', ['$scope', '$rootScope', function($scope, $rootScope) {
+controllers.controller('welcomeController', ['$scope', '$location', function($scope, $location) {
+    
     $scope.test = function(){
-        $rootScope.testWord = $scope.testWord;
-        var wordToTest = $rootScope.testWord;
-        var lwrWord = wordToTest.toLowerCase();
+        $location.path('/wordtest/' + $scope.testWord);
+    };
+}]);
+
+controllers.controller('wordtestController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+        
+        var newWord = $routeParams.testWord;
+        var lwrWord = newWord.toLowerCase();
         $scope.origWord = lwrWord;
         var revWord = '';
         for (var i = lwrWord.length - 1; i >= 0; i--) {
@@ -18,23 +22,7 @@ controllers.controller('welcomeController', ['$scope', '$rootScope', function($s
             $scope.testResults = 'This word is a palindrome.';
         } else {
             $scope.testResults = 'This word is not a palindrome.';
-        }
-        console.log($scope.testResults);
-        $rootScope.testResults = $scope.testResults;
-        $rootScope.revWord = $scope.revWord;
-        $rootScope.origWord = $scope.origWord;
-        window.location.href = '#/wordtest';
-        
-        //routeParam
-    };
-}]);
-
-controllers.controller('wordtestController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
-    
-    $rootScope.origWord;
-    $rootScope.revWord;
-    $rootScope.testResults;
-    
+        }    
 }]);
 
 

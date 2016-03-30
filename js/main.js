@@ -5,7 +5,7 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'views/welcome.html',
         controller: 'welcomeController'
     })
-    .when('/wordtest', {
+    .when('/wordtest/:testWord', {
         templateUrl: 'views/wordtest.html',
         controller: 'wordtestController'
     })
