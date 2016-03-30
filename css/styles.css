@@ -1,5 +1,6 @@
 body {
     padding: 11px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -7,11 +8,20 @@ button {
     height: 30px;
 }
 
-.userName {
-    color: darkcyan;
+h3 {
+    color: darkorange;
+    size: 20px;
 }
 
-.twtTime {
-    font-style: italic;
-    color: darkgoldenrod;
+h4 {
+    color: darkblue;
+    size: 16px;
+}
+
+.page-header {
+    border-bottom: 1px solid #000;
+}
+
+.results {
+    font-weight: bold;
 }
