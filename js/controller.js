@@ -24,6 +24,8 @@ controllers.controller('welcomeController', ['$scope', '$rootScope', function($s
         $rootScope.revWord = $scope.revWord;
         $rootScope.origWord = $scope.origWord;
         window.location.href = '#/wordtest';
+        
+        //routeParam
     };
 }]);
 
